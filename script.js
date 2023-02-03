@@ -9,7 +9,7 @@ document.getElementById("start-button").addEventListener("click", function() {
 
   const interval = setInterval(() => {
     progress += 1 / (15 * 100);
-    progressBar.style.width = `${progress * 100}%`;
+    progressBar.style.width = `${Math.round(progress * 100)}%`;
     progressText.innerHTML = `${Math.round(progress * 100)}%`;
     if (progress >= 1) {
       clearInterval(interval);
